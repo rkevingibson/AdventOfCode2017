@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1AA6E803-ED3F-4C7F-A33C-A08EBBD107DB}</ProjectGuid>
-    <RootNamespace>Day1</RootNamespace>
+    <ProjectGuid>{7BC29780-425C-4298-93A0-7750DF23BDFF}</ProjectGuid>
+    <RootNamespace>Day3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -111,10 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="day1.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="day1.txt" />
+    <ClCompile Include="day3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
