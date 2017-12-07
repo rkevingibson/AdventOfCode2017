@@ -43,7 +43,7 @@ std::pair<int, int> part_1(std::vector<int> memory_banks)
 int main(int argc, char** argv)
 {
 	std::vector<int> test = { 0, 2, 7, 0 };
-	std::vector<int> data = { 4, 1,15,12,0,9,9,5,5,8,7,3,14,5,12,3 };
+	std::vector<int> data = { 4, 1, 15, 12, 0, 9, 9, 5, 5, 8, 7, 3, 14, 5, 12, 3 };
 	auto result = part_1(data);
 
 	std::cout << result.first << "\n" << result.second << std::endl;
