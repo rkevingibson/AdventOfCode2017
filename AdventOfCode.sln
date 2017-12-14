@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day1", "Day1\Day1.vcxproj", "{1AA6E803-ED3F-4C7F-A33C-A08EBBD107DB}"
 EndProject
@@ -27,7 +27,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day11", "Day11\Day11.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day12", "Day12\Day12.vcxproj", "{05BE6C0E-24C6-4E89-A39D-BB74E9625E91}"
 EndProject
+<<<<<<< Updated upstream
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day14", "Day14\Day14.vcxproj", "{37993513-C790-4F22-9A60-FF87E726BAA2}"
+=======
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Day13", "Day13\Day13.vcxproj", "{694D8062-66B1-45DF-BF28-F412802A07A0}"
+>>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +137,7 @@ Global
 		{05BE6C0E-24C6-4E89-A39D-BB74E9625E91}.Release|x64.Build.0 = Release|x64
 		{05BE6C0E-24C6-4E89-A39D-BB74E9625E91}.Release|x86.ActiveCfg = Release|Win32
 		{05BE6C0E-24C6-4E89-A39D-BB74E9625E91}.Release|x86.Build.0 = Release|Win32
+<<<<<<< Updated upstream
 		{37993513-C790-4F22-9A60-FF87E726BAA2}.Debug|x64.ActiveCfg = Debug|x64
 		{37993513-C790-4F22-9A60-FF87E726BAA2}.Debug|x64.Build.0 = Debug|x64
 		{37993513-C790-4F22-9A60-FF87E726BAA2}.Debug|x86.ActiveCfg = Debug|Win32
@@ -141,6 +146,16 @@ Global
 		{37993513-C790-4F22-9A60-FF87E726BAA2}.Release|x64.Build.0 = Release|x64
 		{37993513-C790-4F22-9A60-FF87E726BAA2}.Release|x86.ActiveCfg = Release|Win32
 		{37993513-C790-4F22-9A60-FF87E726BAA2}.Release|x86.Build.0 = Release|Win32
+=======
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Debug|x64.ActiveCfg = Debug|x64
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Debug|x64.Build.0 = Debug|x64
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Debug|x86.ActiveCfg = Debug|Win32
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Debug|x86.Build.0 = Debug|Win32
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Release|x64.ActiveCfg = Release|x64
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Release|x64.Build.0 = Release|x64
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Release|x86.ActiveCfg = Release|Win32
+		{694D8062-66B1-45DF-BF28-F412802A07A0}.Release|x86.Build.0 = Release|Win32
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
