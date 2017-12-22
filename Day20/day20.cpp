@@ -101,6 +101,10 @@ bool linear_solve(int64_t a, int64_t b, int64_t* t)
 		*t = b / a;
 		return true;
 	}
+	if (a == 0 && b == 0) {
+		*t = 0;
+		return true;
+	}
 	return false;
 }
 
@@ -155,6 +159,7 @@ size_t part_2(std::vector<Particle> particles)
 				t1.z = t0.z;
 			}
 
+			//This is incorrect - the times don't necessarily have to be equal, if the velocities are zero. 
 			if (t0.x == t0.y && t0.x == t0.z && t0.x > 0) {
 				collisions.emplace_back(Collision{i, j, t0.x});
 			}
@@ -174,7 +179,7 @@ size_t part_2(std::vector<Particle> particles)
 
 int main(int argc, char** argv)
 {
-	auto particles = load_input("day20.txt");
+	auto particles = load_input("test.txt");
 	std::cout << part_1(particles) << std::endl;
 	std::cout <<part_2(particles) << std::endl;
 	std::getchar();
