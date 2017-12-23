@@ -35,6 +35,23 @@ uint32_t WorldToTileCoord(const Coord& world_coord, Coord& tile_coord)
 	return tile_x + 8*tile_y;
 }
 
+void print_grid(Grid& grid, Coord center, int radius)
+{
+	Coord pos;
+	pos.x = center.x - radius;
+	pos.y = center.y + radius;
+	for (int y = 0; y < 2 * radius + 1; y++, pos.y--) {
+		for (int x = 0; x < 2 * radius + 1; x++, pos.x++) {
+			Coord tile_coord;
+			auto index = WorldToTileCoord(pos, tile_coord);
+			std::cout << (grid[tile_coord][index] ? '#' : '.') << ' ';
+		}
+		std::cout << '\n';
+		pos.x = center.x - radius;
+	}
+	std::cout << '\n';
+}
+
 int part_1(Grid grid)
 {
 	enum Direction {
@@ -54,14 +71,17 @@ int part_1(Grid grid)
 
 	int num_infections = 0;
 	for (int i = 0; i < 10000; ++i) {
+		//print_grid(grid, { 0,0 }, 3);
 		Coord tile_coord;
 		auto tile_index = WorldToTileCoord(position, tile_coord);
-		if (!(prev_tile_coord == tile_coord)) {
+		/*if (!(prev_tile_coord == tile_coord)) {
 			current_tile = grid[tile_coord];
 			prev_tile_coord = tile_coord;
-		}
+		}*/
+		auto& current_tile = grid[tile_coord];
 
 		if (current_tile[tile_index]) {
+			current_tile.reset(tile_index);
 			switch (dir)
 			{
 			case Up:
@@ -79,6 +99,7 @@ int part_1(Grid grid)
 			}
 		}
 		else {
+			current_tile.set(tile_index);
 			switch (dir)
 			{
 			case Up:
@@ -97,7 +118,7 @@ int part_1(Grid grid)
 
 			++num_infections;
 		}
-		current_tile[tile_index].flip();
+		
 
 		switch (dir)
 		{
@@ -116,30 +137,15 @@ int part_1(Grid grid)
 		default:
 			break;
 		}
+
+		
 	}
 
 	return num_infections;
 }
 
-void print_grid(const Grid& grid, Coord center, int radius)
-{
-	Coord pos;
-	pos.x = center.x - radius;
-	pos.y = center.y + radius;
 
 
-}
-
-void print_tile(std::bitset<64> tile) 
-{
-	int i=0;
-	for (int y = 0; y < 8; ++y) {
-		for (int x = 0; x < 8; ++x, ++i) {
-			std::cout << (tile[i] ? '#' : '.');
-		}
-		std::cout << '\n';
-	}
-}
 
 Grid load_input(const char* filename)
 {
@@ -169,7 +175,7 @@ Grid load_input(const char* filename)
 int main(int, char**)
 {
 	auto grid = load_input("day22.txt");
-	print_tile(grid[{0, 0}]);
+	
 
 	std::cout << part_1(grid) << std::endl;
 	std::getchar();
